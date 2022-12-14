@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+h1 {
+    font-family: Orbitron;
+    font-size: 100px;
+}
+h3 {
+    font-family: Orbitron;
+    font-size: 40px;
+}
+h4 {
+    font-family: Orbitron;
+    font-size: 18px;
+}
+h5 {
+    font-family: Orbitron;
+    font-size: 15px;
+}
+#backgroundVid {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+/*--------- nav bar ---------*/
+nav {
+    position: fixed;
+    z-index: +1;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav .logo {
+    flex: 0.49;
+}
+nav img {
+    margin: 0px 10px;
+    height: 20px;
+    cursor: pointer;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;   
+}
+nav ul a {
+    margin: 0px 20px;
+    color: white;
+    transition: 0.5s; 
+}
+nav ul a:hover {
+    color: rgb(255, 210, 0);
+    font-size: 14px;
+}
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 200px;
+    margin-top: 50px;
+    height: 100%;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.sidebar ul p {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: rgb(255, 210, 0);
+    font-size: 10px;
+    line-height: 50px;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgb(50, 50, 50);
+    padding-left: 20px;
+    transition: .5s;
+}
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgb(50, 50, 50);
+    padding-left: 20px;
+    font-size: 14px;
+    color: rgb(201, 201, 201);
+
+    transition: .5s;
+}
+.sidebar ul li:hover a {
+    font-size: 12px;
+    color: white;
+}
+.main-box {
+    padding: 90px 40px 40px 240px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.container {
+    height: 300px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.container img {
+    height: 300px;
+    width: 300px;
+}
+.container .img1 {
+    position: absolute;
+}
+.container .img2 {
+    position: relative;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container:hover .img2 {
+    position: relative;
+    opacity: 1;
+}

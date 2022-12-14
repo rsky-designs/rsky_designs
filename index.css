@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+h1 {
+    font-family: Orbitron;
+    font-size: 100px;
+}
+h3 {
+    font-family: Orbitron;
+    font-size: 40px;
+}
+h4 {
+    font-family: Orbitron;
+    font-size: 18px;
+}
+h5 {
+    font-family: Orbitron;
+    font-size: 15px;
+}
+#backgroundVid {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+/*--------- nav bar ---------*/
+nav {
+    position: fixed;
+    z-index: +1;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav .logo {
+    flex: 0.49;
+}
+nav img {
+    margin: 0px 10px;
+    height: 20px;
+    cursor: pointer;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;   
+}
+nav ul a {
+    margin: 0px 20px;
+    color: white;
+    transition: 0.5s; 
+}
+nav ul a:hover {
+    color: rgb(255, 210, 0);
+    font-size: 14px;
+}
+/*-------- main page --------*/
+.home {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.square {
+    position: relative;
+    width: 580px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.square .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 10, 10);
+    clip-path: circle(0px at center);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.home:hover .circle {
+    background-color: black;
+    clip-path: circle(100% at center);
+}
+.square .intro {
+    position: relative;
+    top: 60%;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.7s;
+}
+.home:hover .intro {
+    
+    opacity: 1;
+    visibility: visible;
+}
+.square .intro h2 {
+    color: rgb(255, 210, 0);
+    margin: 10px 0px 20px 0px;
+}
+
+.square h1 {
+    position: absolute;
+    pointer-events: none;
+    transition: 0.7s;
+}
+.home:hover h1 {
+    font-size: 70px;
+    
+}
+/*---------*/
+.space {
+    height: 40px;
+    background-image: linear-gradient(
+            to right,
+            rgb(5, 5, 5),
+            rgb(15, 15, 15)
+          );
+}
+/*----------*/
+.sectionName {
+    position: absolute;
+    padding: 70px 10%;
+    display: flex;
+}
+.sectionName p {
+    color: rgb(255, 210, 0);
+}
+.sectionName .hrShort {
+    width: 20px;
+    height: 1px;
+    margin: 0.5rem 0.5rem;
+    border-color: rgb(255, 210, 0);
+}
+.sectionName .hrLong {
+    width: 50px;
+    height: 1px;
+    margin: 0.5rem 0.5rem;
+    border-color: rgb(255, 210, 0);
+}
+/*----------*/
+.about {
+    height: 60rem;
+    background-image: url("assets/background-about-dark.jpg");
+    background-color: #000000;
+    background-size: 100%;
+}
+.aboutOverlay {
+    position: absolute;
+    height: 60rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+.aboutGrid {
+    position: absolute;
+    padding: 10% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*---------*/
+.aboutText {
+    padding-bottom: 5rem;
+    grid-column: span 2;
+}
+.aboutText h3 {
+    position: absolute;
+}
+.aboutText span {
+    font-family: Orbitron;
+    font-size: 40px;
+    transition: 0.5s;
+}
+.aboutText:hover span {
+    font-family: Orbitron;
+    font-size: 40px;
+    color: rgb(255, 210, 0);
+}
+.aboutText hr {
+    position: relative;
+    width: 20%;
+    margin-top: 70px;
+}
+.aboutText p {
+    width: 80%;
+    margin-top: 10px;
+}
+.aboutText ul {
+    margin-top: 20px;
+    display: flex;
+}
+.aboutText ul li {
+    display: flex;
+    flex-direction: row;
+}
+.aboutText ul a {
+    margin: 0px 10px;
+    transition: 0.5s;
+}
+.aboutText ul a:hover {
+    font-size: 14px;
+}
+/*---------*/
+.about h4 {
+    margin-bottom: 40px;
+}
+.aboutSkills p {
+    margin-bottom: 5px;
+}
+.skillBar_Outline {
+    height: 0.2em;
+    width: 500px;
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+.skillBar_25 {
+    height: 0.2em;
+    width: 125px;
+    background-color: rgb(221, 70, 0);
+    transition: 0.7s;
+}
+.skillBar_50 {
+    height: 0.2em;
+    width: 250px;
+    background-color: rgb(255, 210, 0);
+    transition: 0.7s;
+}
+.skillBar_90 {
+    height: 0.2em;
+    width: 450px;
+    background-color: rgb(125, 221, 0);
+    transition: 0.7s;
+}
+.aboutWork {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 700px;
+    height: 270px;
+    float: right;
+}
+
+/*---------*/
+.services {
+    height: 60rem;
+    background-image: url("assets/background-services-dark.jpg");
+    background-color: #000000;
+    background-size: 100%;
+}
+.servicesGrid {
+    position: absolute;
+    padding: 10% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+/*---------*/
+.servicesText {
+    padding-bottom: 5rem;
+    grid-column: span 4;
+}
+.servicesText h3 {
+    position: absolute;
+    width: 70%;
+}
+.servicesText span {
+    font-family: Orbitron;
+    font-size: 40px;
+    transition: 0.5s;
+}
+.servicesText:hover span {
+    font-family: Orbitron;
+    font-size: 40px;
+    color: rgb(255, 210, 0);
+}
+.servicesText hr {
+    position: relative;
+    width: 20%;
+    margin-top: 120px;
+}
+.servicesText p {
+    width: 80%;
+    margin-top: 10px;
+}
+.serv {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 35px 35px 1fr;
+}
+.serv img {
+    height: 50px;
+    width: 50px;
+    grid-row: span 2;
+}
+.serv h4 {
+    margin-top: 0.5rem;
+    grid-column: span 3;
+}
+.serv a {
+    font-size: 12px;
+    color: rgb(255, 210, 0);
+    grid-column: span 2;
+}
+.serv:hover a {
+    text-decoration: underline;
+}
+.serv p {
+    margin-top: 0.5rem;
+    grid-column: span 4;
+}
+/*---------*/
+.testimonials {
+    height: 80rem;
+    background-image: url("assets/background-services-dark.jpg");
+    background-color: #000000;
+    background-size: 100%;
+}
+.testimonialsOverlay {
+    position: absolute;
+    height: 80rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+.testimonialsGrid {
+    position: absolute;
+    padding: 10% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+.test {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.test img {
+    height: 250px;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.test span {
+    font-size: 12px;
+    color: rgb(255, 210, 0);
+}
+/*---------*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+    background-color: black;
+    padding: 10px 10px;
+}
