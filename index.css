@@ -10,28 +10,23 @@
 }
 h1 {
     font-family: Orbitron;
-    font-size: 100px;
+    font-size: 5rem;
 }
 h3 {
     font-family: Orbitron;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 h4 {
     font-family: Orbitron;
-    font-size: 18px;
+    font-size: 1rem;
 }
 h5 {
-    font-family: Orbitron;
-    font-size: 15px;
+    font-family: Helvetica;
+    font-size: 1rem;
 }
-#backgroundVid {
-    position: fixed;
-    z-index: -1;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
+p {
+    font-size: 1rem;
+}
 /*--------- nav bar ---------*/
 nav {
     position: fixed;
@@ -64,12 +59,18 @@ nav ul a {
 }
 nav ul a:hover {
     color: rgb(255, 210, 0);
-    font-size: 14px;
+    font-size: 1rem;
 }
-/*-------- main page --------*/
+/*---------*/
+/*---------*/
+/*---------*/
+.main {
+    width: 100%;
+}
 .home {
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    height: 60rem;
+    background-image: linear-gradient(#000,rgb(2, 2, 2));
+    background-size: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,26 +122,19 @@ nav ul a:hover {
     transition: 0.7s;
 }
 .home:hover h1 {
-    font-size: 70px;
+    font-size: 4rem;
     
 }
 /*---------*/
-.space {
-    height: 40px;
-    background-image: linear-gradient(
-            to right,
-            rgb(5, 5, 5),
-            rgb(15, 15, 15)
-          );
-}
-/*----------*/
+/*---------*/
+/*---------*/
 .sectionName {
-    position: absolute;
-    padding: 70px 10%;
+    padding: 5% 10%;
     display: flex;
 }
 .sectionName p {
     color: rgb(255, 210, 0);
+    font-size: rem;
 }
 .sectionName .hrShort {
     width: 20px;
@@ -154,22 +148,14 @@ nav ul a:hover {
     margin: 0.5rem 0.5rem;
     border-color: rgb(255, 210, 0);
 }
-/*----------*/
+/*---------*/
+/*---------*/
+/*---------*/
 .about {
-    height: 60rem;
-    background-image: url("assets/background-about-dark.jpg");
-    background-color: #000000;
-    background-size: 100%;
-}
-.aboutOverlay {
-    position: absolute;
-    height: 60rem;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-image: linear-gradient(#000,rgb(2, 2, 2));
 }
 .aboutGrid {
-    position: absolute;
-    padding: 10% 10%;
+    padding: 0% 10% 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -178,27 +164,23 @@ nav ul a:hover {
     padding-bottom: 5rem;
     grid-column: span 2;
 }
-.aboutText h3 {
-    position: absolute;
-}
 .aboutText span {
     font-family: Orbitron;
-    font-size: 40px;
+    font-size: 2.5rem;
     transition: 0.5s;
 }
 .aboutText:hover span {
     font-family: Orbitron;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: rgb(255, 210, 0);
 }
 .aboutText hr {
-    position: relative;
     width: 20%;
-    margin-top: 70px;
+    margin: 2rem 0.5rem 1rem;
 }
 .aboutText p {
-    width: 80%;
-    margin-top: 10px;
+    font-size: 1rem;
+    margin: 1rem 10rem 0rem 0rem;
 }
 .aboutText ul {
     margin-top: 20px;
@@ -213,153 +195,147 @@ nav ul a:hover {
     transition: 0.5s;
 }
 .aboutText ul a:hover {
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 /*---------*/
 .about h4 {
     margin-bottom: 40px;
 }
+.aboutSkills {
+    
+}
 .aboutSkills p {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 .skillBar_Outline {
     height: 0.2em;
-    width: 500px;
+    width: 80%;
     outline: 1px solid rgba(255, 255, 255, 0.5);
     margin-bottom: 20px;
 }
 .skillBar_25 {
     height: 0.2em;
-    width: 125px;
+    width: 25%;
     background-color: rgb(221, 70, 0);
     transition: 0.7s;
 }
 .skillBar_50 {
     height: 0.2em;
-    width: 250px;
+    width: 50%;
     background-color: rgb(255, 210, 0);
     transition: 0.7s;
 }
 .skillBar_90 {
     height: 0.2em;
-    width: 450px;
+    width: 90%;
     background-color: rgb(125, 221, 0);
     transition: 0.7s;
 }
 .aboutWork {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 700px;
-    height: 270px;
-    float: right;
+    
 }
-
+.aboutWork .myWork {
+    width: 100%;
+    height: 17rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/*---------*/
+/*---------*/
 /*---------*/
 .services {
-    height: 60rem;
-    background-image: url("assets/background-services-dark.jpg");
-    background-color: #000000;
-    background-size: 100%;
-}
-.servicesGrid {
-    position: absolute;
-    padding: 10% 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+    background-image: linear-gradient(#000,rgb(2, 2, 2));
 }
 /*---------*/
 .servicesText {
-    padding-bottom: 5rem;
-    grid-column: span 4;
-}
-.servicesText h3 {
-    position: absolute;
-    width: 70%;
+    padding: 0% 10%;
 }
 .servicesText span {
     font-family: Orbitron;
-    font-size: 40px;
+    font-size: 2.5rem;
     transition: 0.5s;
 }
 .servicesText:hover span {
     font-family: Orbitron;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: rgb(255, 210, 0);
 }
 .servicesText hr {
-    position: relative;
     width: 20%;
-    margin-top: 120px;
+    margin: 2rem 0.5rem 1rem;
 }
 .servicesText p {
-    width: 80%;
-    margin-top: 10px;
+    font-size: 1rem;
+    margin: 1rem 10rem 0rem 0rem;
+}
+/*---------*/
+.servicesGrid {
+    padding: 5% 10% 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+@media (max-width: 1400px) {
+    .servicesGrid {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 .serv {
     background-color: rgba(255, 255, 255, 0.02);
     border-radius: 0.5rem;
     padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 35px 35px 1fr;
 }
-.serv img {
-    height: 50px;
-    width: 50px;
-    grid-row: span 2;
+.servGrid {
+    display: flex;
+    gap: 1rem;
 }
-.serv h4 {
-    margin-top: 0.5rem;
-    grid-column: span 3;
+.servGrid img {
+    max-height: 50px;
+    max-width: 50px;
+    grid-column: span 1;
+}
+.servGridText {
+    white-space: nowrap;
+    grid-column: span 4;
 }
 .serv a {
-    font-size: 12px;
+    font-size: 0.8rem;
     color: rgb(255, 210, 0);
-    grid-column: span 2;
 }
 .serv:hover a {
     text-decoration: underline;
 }
 .serv p {
-    margin-top: 0.5rem;
-    grid-column: span 4;
+    font-size: 1rem;
+    margin-top: 2rem;
 }
 /*---------*/
+/*---------*/
+/*---------*/
 .testimonials {
-    height: 80rem;
-    background-image: url("assets/background-services-dark.jpg");
-    background-color: #000000;
-    background-size: 100%;
-}
-.testimonialsOverlay {
-    position: absolute;
-    height: 80rem;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-image: linear-gradient(#000,rgb(2, 2, 2));
 }
 .testimonialsGrid {
-    position: absolute;
-    padding: 10% 10%;
+    padding: 0% 10% 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
 }
+@media (max-width:1000px) {
+    .testimonialsGrid {
+        padding: 0% 10% 10%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 .test {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 0.5rem;
+    font-size: 1rem;
     padding: 2rem;
-    margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.test img {
-    height: 250px;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.05);
 }
 .test span {
-    font-size: 12px;
+    font-size: 0.5rem;
     color: rgb(255, 210, 0);
 }
 /*---------*/
