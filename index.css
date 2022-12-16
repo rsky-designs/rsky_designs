@@ -1,3 +1,6 @@
+:root {
+    font-size: 16px;
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,19 +12,25 @@
     scroll-behavior: smooth;
 }
 h1 {
-    font-family: Orbitron;
-    font-size: 5rem;
+    font-family: Roboto;
+    font-size: 7rem;
 }
 h3 {
-    font-family: Orbitron;
-    font-size: 2.5rem;
+    font-family: Roboto;
+    font-size: 3rem;
+}
+@media (max-width: 800px) {
+    h3 {
+        font-family: Roboto;
+        font-size: 1.5rem;
+    }   
 }
 h4 {
-    font-family: Orbitron;
+    font-family: Roboto;
     font-size: 1rem;
 }
 h5 {
-    font-family: Helvetica;
+    font-family: Roboto;
     font-size: 1rem;
 }
 p {
@@ -59,7 +68,6 @@ nav ul a {
 }
 nav ul a:hover {
     color: rgb(255, 210, 0);
-    font-size: 1rem;
 }
 /*---------*/
 /*---------*/
@@ -68,9 +76,8 @@ nav ul a:hover {
     width: 100%;
 }
 .home {
-    height: 60rem;
+    height: 100vh;
     background-image: linear-gradient(#000,rgb(2, 2, 2));
-    background-size: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,6 +91,13 @@ nav ul a:hover {
     align-items: center;
     justify-content: center;
 }
+@media (max-width: 800px) {
+    .square {
+        width: 290px;
+        height: 100px;
+
+    }    
+}
 .square .circle {
     position: absolute;
     width: 100%;
@@ -94,7 +108,7 @@ nav ul a:hover {
     overflow: hidden;
 }
 .home:hover .circle {
-    background-color: black;
+    background-color: rgb(255, 0, 0);
     clip-path: circle(100% at center);
 }
 .square .intro {
@@ -106,8 +120,12 @@ nav ul a:hover {
     pointer-events: none;
     transition: 0.7s;
 }
+@media (max-width: 800px) {
+    .square .intro {
+        margin-top: 7rem;
+    }  
+}
 .home:hover .intro {
-    
     opacity: 1;
     visibility: visible;
 }
@@ -115,26 +133,41 @@ nav ul a:hover {
     color: rgb(255, 210, 0);
     margin: 10px 0px 20px 0px;
 }
-
+@media (max-width: 800px) {
+    .square .intro h2 {
+        font-size: 1rem;
+    }
+    
+}
 .square h1 {
     position: absolute;
     pointer-events: none;
     transition: 0.7s;
 }
+@media (max-width: 800px) {
+    .square h1 {
+        font-size: 2.2rem;
+    }   
+    
+}
 .home:hover h1 {
-    font-size: 4rem;
+    font-size: 5rem;   
+}
+@media (max-width: 800px) {
+    .home:hover h1 {
+        font-size: 2rem;   
+    }  
     
 }
 /*---------*/
 /*---------*/
 /*---------*/
 .sectionName {
-    padding: 5% 10%;
+    padding: 5% 10% 3rem;
     display: flex;
 }
 .sectionName p {
     color: rgb(255, 210, 0);
-    font-size: rem;
 }
 .sectionName .hrShort {
     width: 20px;
@@ -165,14 +198,21 @@ nav ul a:hover {
     grid-column: span 2;
 }
 .aboutText span {
-    font-family: Orbitron;
-    font-size: 2.5rem;
+    font-family: Roboto;
+    white-space: nowrap;
     transition: 0.5s;
 }
 .aboutText:hover span {
-    font-family: Orbitron;
-    font-size: 2.5rem;
+    font-family: Roboto;
+    font-size: 3rem;
     color: rgb(255, 210, 0);
+}
+@media (max-width: 800px) {
+    .aboutText:hover span {
+        font-family: Roboto;
+        font-size: 1.5rem;
+        color: rgb(255, 210, 0);
+    }  
 }
 .aboutText hr {
     width: 20%;
@@ -180,7 +220,7 @@ nav ul a:hover {
 }
 .aboutText p {
     font-size: 1rem;
-    margin: 1rem 10rem 0rem 0rem;
+    margin: 1rem 1rem 0rem 0rem;
 }
 .aboutText ul {
     margin-top: 20px;
@@ -250,14 +290,18 @@ nav ul a:hover {
     padding: 0% 10%;
 }
 .servicesText span {
-    font-family: Orbitron;
-    font-size: 2.5rem;
+    font-family: Roboto;
     transition: 0.5s;
 }
 .servicesText:hover span {
-    font-family: Orbitron;
-    font-size: 2.5rem;
+    font-family: Roboto;
+    font-size: 3rem;
     color: rgb(255, 210, 0);
+}
+@media (max-width: 800px) {
+    .servicesText:hover span {
+        font-size: 1.5rem;
+    }
 }
 .servicesText hr {
     width: 20%;
@@ -265,17 +309,18 @@ nav ul a:hover {
 }
 .servicesText p {
     font-size: 1rem;
-    margin: 1rem 10rem 0rem 0rem;
+    margin: 1rem 1rem 0rem 0rem;
 }
 /*---------*/
 .servicesGrid {
     padding: 5% 10% 10%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
+    gap: 1rem;
 }
 @media (max-width: 1400px) {
     .servicesGrid {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
@@ -319,10 +364,11 @@ nav ul a:hover {
     padding: 0% 10% 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 @media (max-width:1000px) {
     .testimonialsGrid {
+        width: 100%;
         padding: 0% 10% 10%;
         display: flex;
         flex-wrap: wrap;
@@ -331,18 +377,20 @@ nav ul a:hover {
 .test {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 0.5rem;
-    font-size: 1rem;
     padding: 2rem;
 }
+.test p {
+    font-size: 1rem;
+}
 .test span {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     color: rgb(255, 210, 0);
 }
 /*---------*/
 .footer {
     position: fixed;
     bottom: 0;
-    height: 3rem;
+    height: 50px;
     width: 100%;
     background-color: black;
     padding: 10px 10px;
