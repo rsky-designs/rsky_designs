@@ -40,7 +40,7 @@ p {
 nav {
     position: fixed;
     z-index: +1;
-    height: 50px;
+    height: 70px;
     width: 100%;
     background-color: rgb(0, 0, 0);
     color: white;
@@ -49,8 +49,29 @@ nav {
     flex-direction: row;
     align-items: center;
 }
+@media (max-width: 1200px) {
+    nav {
+        justify-content: center;
+    }
+}
+@media (max-width: 600px) {
+    nav {
+        justify-content: left;
+    }
+}
 nav .logo {
     flex: 0.49;
+}
+@media (max-width: 1200px) {
+    nav .logo {
+        display: none;
+    }   
+}
+@media (max-width: 600px) {
+    nav .logo {
+        display: initial;
+        margin-right: auto;
+    }   
 }
 nav img {
     margin: 0px 10px;
@@ -61,6 +82,11 @@ nav ul {
     display: flex;
     flex-direction: row;   
 }
+@media (max-width: 600px) {
+    nav ul {
+        display: none;   
+    }
+}
 nav ul a {
     margin: 0px 20px;
     color: white;
@@ -68,6 +94,19 @@ nav ul a {
 }
 nav ul a:hover {
     color: rgb(255, 210, 0);
+}
+.mobileMenu {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: none;
+
+}
+@media (max-width: 600px) {
+    .mobileMenu {
+        display: initial;
+    
+}
 }
 /*---------*/
 /*---------*/
@@ -77,8 +116,7 @@ nav ul a:hover {
 }
 .home {
     height: 100vh;
-    background-image: linear-gradient(#000,rgb(2, 2, 2));
-    display: flex;
+    background-image: linear-gradient(rgb(5, 5, 5),rgb(10, 10, 10));    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -108,7 +146,7 @@ nav ul a:hover {
     overflow: hidden;
 }
 .home:hover .circle {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0);
     clip-path: circle(100% at center);
 }
 .square .intro {
@@ -159,6 +197,13 @@ nav ul a:hover {
     }  
     
 }
+.pfp {
+    position: absolute;
+    bottom: 0;
+    float: right;
+    margin-right: 5rem;
+    height: 600px;
+}
 /*---------*/
 /*---------*/
 /*---------*/
@@ -185,17 +230,10 @@ nav ul a:hover {
 /*---------*/
 /*---------*/
 .about {
-    background-image: linear-gradient(#000,rgb(2, 2, 2));
-}
-.aboutGrid {
-    padding: 0% 10% 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    background-image: linear-gradient(rgb(5, 5, 5),rgb(10, 10, 10));}
 /*---------*/
 .aboutText {
-    padding-bottom: 5rem;
-    grid-column: span 2;
+    padding: 0% 10%;
 }
 .aboutText span {
     font-family: Roboto;
@@ -209,9 +247,7 @@ nav ul a:hover {
 }
 @media (max-width: 800px) {
     .aboutText:hover span {
-        font-family: Roboto;
         font-size: 1.5rem;
-        color: rgb(255, 210, 0);
     }  
 }
 .aboutText hr {
@@ -223,7 +259,7 @@ nav ul a:hover {
     margin: 1rem 1rem 0rem 0rem;
 }
 .aboutText ul {
-    margin-top: 20px;
+    margin-top: 2rem;
     display: flex;
 }
 .aboutText ul li {
@@ -238,18 +274,30 @@ nav ul a:hover {
     font-size: 0.8rem;
 }
 /*---------*/
+.aboutGrid {
+    padding: 5rem 10% 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (max-width: 1400px) {
+    .aboutGrid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 .about h4 {
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
 }
 .aboutSkills {
-    
+    width: 100%;  
 }
 .aboutSkills p {
     margin-bottom: 0.5rem;
 }
 .skillBar_Outline {
     height: 0.2em;
-    width: 80%;
     outline: 1px solid rgba(255, 255, 255, 0.5);
     margin-bottom: 20px;
 }
@@ -272,19 +320,18 @@ nav ul a:hover {
     transition: 0.7s;
 }
 .aboutWork {
+    width: 100%;
     
 }
 .aboutWork .myWork {
-    width: 100%;
-    height: 17rem;
+    height: 18rem;
     background-color: rgba(255, 255, 255, 0.1);
 }
 /*---------*/
 /*---------*/
 /*---------*/
 .services {
-    background-image: linear-gradient(#000,rgb(2, 2, 2));
-}
+    background-image: linear-gradient(rgb(5, 5, 5),rgb(10, 10, 10));}
 /*---------*/
 .servicesText {
     padding: 0% 10%;
@@ -358,7 +405,7 @@ nav ul a:hover {
 /*---------*/
 /*---------*/
 .testimonials {
-    background-image: linear-gradient(#000,rgb(2, 2, 2));
+    background-image: linear-gradient(rgb(5, 5, 5),rgb(10, 10, 10));
 }
 .testimonialsGrid {
     padding: 0% 10% 10%;
